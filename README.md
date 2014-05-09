@@ -26,3 +26,43 @@ console.log("Gano: Rnb"+Rnb+" Perdio: Rna"+Rnb);
 console.log("Empate: Rna"+Rna+" Empate: Rnb"+Rnb);
 }
 ```
+### Combinaciones posibles sin repeticion en pares:
+
+ * [1, 2, 3, 4]
+ * [1, 2]
+ * [1, 3]
+ * [1, 4]
+ * [2, 3]
+ * [2, 4]
+ * [3, 4]
+
+#### Se observa que el objeto [0] del arreglo se convina con los 3 porteriores, restando 1 obtenermos que el objeto [1] con los 2 posteriores y asi continuamente, destacando que esta formula depende de el tamaño del arreglo.
+
+```js
+
+var com = function(uno,dos) {
+	if (full < t) {
+		console.log(uno+" VS "+dos);
+		full++;
+	}else if (full == t) {
+		console.log("FIN");
+	};
+	
+};
+
+var tamaño = chicas.length-1;//3
+var i = 0;
+while(i < tamaño){
+	com(chicas[tamaño],chicas[i]);
+	i++;
+	if(i == tamaño){
+		i = 0;
+		--tamaño;
+		if (tamaño == 1) {
+		com(chicas[tamaño],chicas[i]);
+		console.log("Son: "+t+" combinaciones");
+		};
+	};
+};
+
+```
